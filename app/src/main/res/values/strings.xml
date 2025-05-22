@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">ExamenParcial</string>
+    <string name="txtLogin">LOGIN</string>
+    <string name="txtNombre">nombre:</string>
+    <string name="txtContra">contraseña:</string>
+    <string name="txtNomIgresar">ingrese el nombre</string>
+    <string name="txtConIgresar">ingrese la contraseña</string>
+    <string name="btnIniciar">iniciar sesion</string>
+
+    <string name="txtNombreRegistro">Nombre completo</string>
+    <string name="txtCorreoRegistro">Correo electrónico</string>
+    <string name="txtCelularRegistro">Número de celular</string>
+    <string name="txtfechaRegistro">Fecha de nacimiento </string>
+    <string name="btnVolverRegistro">Volver </string>
+    <string name="btnGuardarRegistro">validar</string>
 </resources>

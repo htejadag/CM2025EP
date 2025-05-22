@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">DeyviVasquez</string>
+    <!-- Iniciar sesion -->
+    <string name="hint_usuario">Usuario</string>
+    <string name="hint_password">Contraseña</string>
+    <string name="button_text">Inicar</string>
+
+    <string name="hint_nombre">Nombre dato</string>
+    <string name="hint_correo">Correo electronico</string>
+    <string name="hint_celular">Celular movil</string>
+    <string name="hint_fn">Nacimiento</string>
+    <string name="hint_sexo1">Masculino</string>
+    <string name="hint_sexo2">Femenino</string>
+    <string name="hint_condiciones">Politicas y condiciones</string>
+    <string name="hint_regresar">Volver</string>
+    <string name="hint_validar">Entrar</string>
+</resources>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">DeyviVasquez</string>
+    <!-- Iniciar sesion -->
+    <string name="hint_usuario">Usuario</string>
+    <string name="hint_password">Contraseña</string>
+    <string name="button_text">Inicar</string>
+
+    <!-- Registro de datos
+    <string name="app_name">ExamenParcial</string>
+    <string name="app_name">ExamenParcial</string>-->
+</resources>

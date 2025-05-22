@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "ExamenParcial"
+rootProject.name = "APPparcialCM"
 include(":app")
  

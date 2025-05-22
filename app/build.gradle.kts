@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.examenparcial"
+    namespace = "com.example.appparcialcm"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.examenparcial"
+        applicationId = "com.example.appparcialcm"
         minSdk = 24
         targetSdk = 35
         versionCode = 1

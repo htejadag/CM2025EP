@@ -1,4 +1,4 @@
-package com.example.examenparcial;
+package com.example.appparcialcm;
 
 import org.junit.Test;
 

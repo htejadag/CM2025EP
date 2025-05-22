@@ -1,3 +1,5 @@
 <resources>
     <integer name="max_longitud_usuario">20</integer>
+    <integer name="max_longitud_nombre">15</integer>
+    <integer name="max_longitud_telefono">9</integer>
 </resources>

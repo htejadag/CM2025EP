@@ -4,6 +4,15 @@
         <string name="hint_contrasena">Contraseña</string>
         <string name="boton_iniciar_sesion">Iniciar sesión</string>
         <string name="login_error_msg">Usuario y contraseña deben coincidir</string>
-
+        <string name="hint_nombre">Nombre</string>
+        <string name="hint_email">Correo electrónico</string>
+        <string name="hint_telefono">Número de teléfono</string>
+        <string name="hint_fecha_nacimiento">Fecha de nacimiento</string>
+    <string name="terminos_condiciones">Acepto los términos y condiciones</string>
+    <string name="btn_regresar">Regresar</string>
+    <string name="btn_validar">Validar</string>
+    <string name="error_datos_incompletos">Por favor, complete todos los datos y acepte los términos.</string>
+    <string name="datos_validos">Los datos son correctos y validados.</string>
+    <string name="error_validacion_datos">Correo o teléfono no válidos. Verifique los datos ingresados.</string>
 
 </resources>

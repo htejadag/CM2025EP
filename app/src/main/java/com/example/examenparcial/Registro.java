@@ -10,11 +10,13 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import android.os.Bundle;
+import android.text.InputFilter;
 import android.util.Patterns;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -22,76 +24,67 @@ import java.util.Calendar;
 
 public class Registro extends AppCompatActivity {
 
-        EditText etNombre, etCorreo, etCelular, etFechaNacimiento;
-        RadioGroup rgGenero;
-        CheckBox cbTerminos;
-        Button btnValidar, btnRegresar;
+    EditText etNombre, etEmail, etTelefono, etFechaNacimiento;
+    Button btnRegresar, btnValidar;
+    CheckBox cbTerminosCondiciones;
 
-        @Override
-        protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_registro);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_registro);
 
-            etNombre = findViewById(R.id.etNombre);
-            etCorreo = findViewById(R.id.etCorreo);
-            etCelular = findViewById(R.id.etCelular);
-            etFechaNacimiento = findViewById(R.id.etFechaNacimiento);
-            rgGenero = findViewById(R.id.rgGenero);
-            cbTerminos = findViewById(R.id.cbTerminos);
-            btnValidar = findViewById(R.id.btnValidar);
-            btnRegresar = findViewById(R.id.btnRegresar);
+        etNombre = findViewById(R.id.etNombre);
+        etEmail = findViewById(R.id.etEmail);
+        etTelefono = findViewById(R.id.etTelefono);
+        etFechaNacimiento = findViewById(R.id.etFechaNacimiento);
+        btnRegresar = findViewById(R.id.btnRegresar);
+        btnValidar = findViewById(R.id.btnValidar);
+        cbTerminosCondiciones = findViewById(R.id.cbTerminosCondiciones);
 
-            // Selección de fecha con DatePicker
-            etFechaNacimiento.setOnClickListener(v -> showDatePicker());
+        int maxNombreLength = getResources().getInteger(R.integer.max_longitud_nombre);
+        etNombre.setFilters(new InputFilter[] { new InputFilter.LengthFilter(maxNombreLength) });
 
-            // Activar botón validar solo si se aceptan los términos
-            cbTerminos.setOnCheckedChangeListener((buttonView, isChecked) -> btnValidar.setEnabled(isChecked));
-
-            btnValidar.setOnClickListener(v -> validarDatos());
-
-            btnRegresar.setOnClickListener(v -> finish()); // Vuelve a MainActivity
-        }
-
-        private void showDatePicker() {
+        // Configurar el DatePicker
+        etFechaNacimiento.setOnClickListener(v -> {
             Calendar calendar = Calendar.getInstance();
-            new DatePickerDialog(this, (view, year, month, dayOfMonth) -> {
-                String fecha = dayOfMonth + "/" + (month + 1) + "/" + year;
-                etFechaNacimiento.setText(fecha);
-            },
-                    calendar.get(Calendar.YEAR),
-                    calendar.get(Calendar.MONTH),
-                    calendar.get(Calendar.DAY_OF_MONTH)).show();
-        }
+            int year = calendar.get(Calendar.YEAR);
+            int month = calendar.get(Calendar.MONTH);
+            int day = calendar.get(Calendar.DAY_OF_MONTH);
 
-        private void validarDatos() {
-            String nombre = etNombre.getText().toString().trim();
-            String correo = etCorreo.getText().toString().trim();
-            String celular = etCelular.getText().toString().trim();
-            String fecha = etFechaNacimiento.getText().toString().trim();
-            int generoId = rgGenero.getCheckedRadioButtonId();
+            DatePickerDialog datePickerDialog = new DatePickerDialog(
+                    Registro.this,
+                    (view, year1, monthOfYear, dayOfMonth) -> {
+                        // Mostrar la fecha seleccionada en el EditText
+                        etFechaNacimiento.setText(dayOfMonth + "/" + (monthOfYear + 1) + "/" + year1);
+                    },
+                    year, month, day
+            );
+            datePickerDialog.show();
+        });
 
-            if (nombre.isEmpty() || nombre.length() > 15) {
-                mostrarAlerta("Nombre inválido (máx 15 caracteres).");
-            } else if (!Patterns.EMAIL_ADDRESS.matcher(correo).matches()) {
-                mostrarAlerta("Correo electrónico inválido.");
-            } else if (!celular.matches("\\d{9}")) {
-                mostrarAlerta("Número de celular debe tener 9 dígitos.");
-            } else if (fecha.isEmpty()) {
-                mostrarAlerta("Debe ingresar una fecha de nacimiento.");
-            } else if (generoId == -1) {
-                mostrarAlerta("Debe seleccionar un género.");
+        btnRegresar.setOnClickListener(v -> finish());
+
+        btnValidar.setOnClickListener(v -> {
+            String nombre = etNombre.getText().toString();
+            String email = etEmail.getText().toString();
+            String telefono = etTelefono.getText().toString();
+            String fechaNacimiento = etFechaNacimiento.getText().toString();
+            boolean aceptoTerminos = cbTerminosCondiciones.isChecked();
+
+            if (nombre.isEmpty() || email.isEmpty() || telefono.isEmpty() || fechaNacimiento.isEmpty() || !aceptoTerminos) {
+                Toast.makeText(Registro.this, getString(R.string.error_datos_incompletos), Toast.LENGTH_SHORT).show();
             } else {
-                mostrarAlerta("Todos los datos son válidos.");
+                if (isValidEmail(email) && telefono.length() <= getResources().getInteger(R.integer.max_longitud_telefono)) {
+                    Toast.makeText(Registro.this, getString(R.string.datos_validos), Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(Registro.this, getString(R.string.error_validacion_datos), Toast.LENGTH_SHORT).show();
+                }
             }
-        }
-
-        private void mostrarAlerta(String mensaje) {
-            new AlertDialog.Builder(this)
-                    .setTitle("Validación")
-                    .setMessage(mensaje)
-                    .setPositiveButton("OK", null)
-                    .show();
-        }
+        });
     }
 
+    private boolean isValidEmail(String email) {
+        return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches();
+    }
+}
 

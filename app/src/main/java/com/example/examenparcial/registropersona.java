@@ -47,7 +47,7 @@ public EditText txt_nombre;
         btn_validar = findViewById((R.id.btnValidar));
 
         btn_validar.setOnClickListener(v -> {
-            validarFormulario();;
+            validarFormulario();
         });
 
 

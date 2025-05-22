@@ -1,3 +1,18 @@
 <resources>
-    <string name="app_name">ExamenParcial</string>
+    <string name="app_name">AppParcialCM</string>
+    <string name="hint_user">Ingresar usuario</string>
+    <string name="hint_pass">Ingresar contraseña</string>
+    <string name="btn_iniciar">Iniciar sesion</string>
+    <string name="btn_registro">Crear nueva cuenta</string>
+
+    <!--    Ventana de  registro-->
+    <string name="hint_nombre">Ingresar nombre</string>
+    <string name="hint_correo">Ingresar Correo</string>
+    <string name="hint_numero">Ingresar numero</string>
+    <string name="hint_fecha">Ingresar fecha nacimiento</string>
+    <string name="txt_genero_m">Masculino</string>
+    <string name="txt_genero_f">Femenino</string>
+    <string name="txt_registrar">Registrar</string>
+    <string name="txt_terminos">Aceptar terminos y condiciones</string>
+    <string name="todo">TODO</string>
 </resources>

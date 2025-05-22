@@ -1,24 +1,40 @@
 package com.example.examenparcial;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
+
+    EditText etUsuario, etPassword;
+    Button btnIngresar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+
+        etUsuario = findViewById(R.id.etUsuario);
+        etPassword = findViewById(R.id.etPassword);
+        btnIngresar = findViewById(R.id.btnIngresar);
+
+
+        btnIngresar.setOnClickListener(v -> {
+            String user = etUsuario.getText().toString();
+            String pass = etPassword.getText().toString();
+
+            if (user.isBlank() || pass.isBlank()) {
+                Toast.makeText(this, "Rellene ambos campos", Toast.LENGTH_SHORT).show();
+            } else if (user.equals(pass)) {
+                Intent i = new Intent(MainActivity.this, activity_registro.class);
+                startActivity(i);
+            } else {
+                Toast.makeText(this, "Credenciales incorrectas", Toast.LENGTH_SHORT).show();
+            }
         });
     }
 }

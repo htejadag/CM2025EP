@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">AppParcialCM</string>
+    <string name="txtuser">INGRESE USUARIO</string>
+    <string name="txtpass">INGRESE CONTRASEÑA</string>
+    <string name="btnlogin">INICIAR SESION</string>
+    <string name="txtname">INGRESE NOMBRE</string>
+    <string name="txtcorreo">INGRESE CORREO</string>
+    <string name="txtnumecel">INGRESE CELULAR</string>
+    <string name="fecha">INGRESE FECHA NACIMIENTO</string>
+    <string name="btnregresar">REGRESAR</string>
+    <string name="btnvalidar">VALIDAR</string>
+    <string name="femenino">Femenino</string>
+    <string name="masculino">Masculino</string>
+</resources>

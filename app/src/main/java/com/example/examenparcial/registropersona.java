@@ -65,7 +65,7 @@ public EditText txt_nombre;
             Toast.makeText(this, "Por favor ingrese un correo válido", Toast.LENGTH_SHORT).show();
             return;
         }
-        if (numero.isEmpty() || numero.length() != 9) {
+        if (numero.length() != 9) {
             Toast.makeText(this, "Por favor ingrese un número válido (9 dígitos)", Toast.LENGTH_SHORT).show();
             return;
         }

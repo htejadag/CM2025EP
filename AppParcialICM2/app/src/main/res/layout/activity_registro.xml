@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <EditText
+            android:id="@+id/etNombre"
+            android:layout_width="300dp"
+            android:layout_height="56dp"
+            android:hint="@string/hint_nombre"
+            android:maxLength="15"
+            android:inputType="textPersonName"
+            android:importantForAutofill="yes"
+            android:autofillHints="name"
+            android:textColor="#212121"
+            android:textColorHint="#757575"
+            android:backgroundTint="#757575"
+            android:layout_marginBottom="12dp" />
+
+        <EditText
+            android:id="@+id/etCorreo"
+            android:layout_width="300dp"
+            android:layout_height="56dp"
+            android:hint="@string/hint_correo"
+            android:inputType="textEmailAddress"
+            android:importantForAutofill="yes"
+            android:autofillHints="emailAddress"
+            android:textColor="#212121"
+            android:textColorHint="#757575"
+            android:backgroundTint="#757575"
+            android:layout_marginBottom="12dp" />
+
+        <EditText
+            android:id="@+id/etCelular"
+            android:layout_width="300dp"
+            android:layout_height="56dp"
+            android:hint="@string/hint_celular"
+            android:maxLength="9"
+            android:inputType="phone"
+            android:importantForAutofill="yes"
+            android:autofillHints="phone"
+            android:textColor="#212121"
+            android:textColorHint="#757575"
+            android:backgroundTint="#757575"
+            android:layout_marginBottom="12dp" />
+
+        <EditText
+            android:id="@+id/etFecha"
+            android:layout_width="300dp"
+            android:layout_height="56dp"
+            android:hint="@string/hint_fecha"
+            android:inputType="date"
+            android:importantForAutofill="yes"
+            android:autofillHints="birthday"
+            android:textColor="#212121"
+            android:textColorHint="#757575"
+            android:backgroundTint="#757575"
+            android:layout_marginBottom="12dp" />
+
+        <RadioGroup
+            android:id="@+id/rgGenero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <RadioButton
+                android:id="@+id/rbMasculino"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rb_masculino"
+                android:textColor="#212121" />
+
+            <RadioButton
+                android:id="@+id/rbFemenino"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rb_femenino"
+                android:textColor="#212121"
+                android:layout_marginStart="24dp" />
+        </RadioGroup>
+
+        <CheckBox
+            android:id="@+id/cbTerminos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/terminos"
+            android:textColor="#212121"
+            android:layout_marginBottom="24dp" />
+
+        <Button
+            android:id="@+id/btnValidar"
+            android:layout_width="300dp"
+            android:layout_height="56dp"
+            android:text="@string/btn_validar"
+            android:backgroundTint="#4CAF50"
+            android:textColor="#FFFFFF"
+            android:enabled="false"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btnRegresar"
+            android:layout_width="300dp"
+            android:layout_height="56dp"
+            android:text="@string/btn_regresar"
+            android:backgroundTint="#616161"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+</ScrollView>

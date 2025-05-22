@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AppParcialCM</string>
+    <string name="login_title">Iniciar Sesión</string>
+    <string name="username_hint">Usuario</string>
+    <string name="password_hint">Contraseña</string>
+    <string name="login_button_text">Iniciar Sesión</string>
+    <string name="incorrect_credentials_alert">Credenciales incorrectas</string>
+    <string name="username_length_alert">El usuario no puede exceder los 20 caracteres.</string>
+
+    <string name="registration_title">Registro de Datos Personales</string>
+    <string name="name_hint">Nombre</string>
+    <string name="email_hint">Correo Electrónico</string>
+    <string name="phone_hint">Número de Celular</string>
+    <string name="dob_hint">Fecha de Nacimiento (YYYY-MM-DD)</string>
+    <string name="gender_label">Género:</string>
+    <string name="gender_male">Masculino</string>
+    <string name="gender_female">Femenino</string>
+    <string name="terms_and_conditions_label">Acepto los términos y condiciones</string>
+    <string name="validate_button_text">Validar</string>
+    <string name="back_button_text">Regresar</string>
+
+    <string name="terms_not_accepted_alert">Debe aceptar los términos y condiciones para continuar.</string>
+    <string name="complete_all_fields_alert">Por favor, complete todos los campos.</string>
+    <string name="name_length_alert">El nombre no debe exceder los 15 caracteres.</string>
+    <string name="invalid_email_alert">Por favor, ingrese un correo electrónico válido.</string>
+    <string name="invalid_phone_alert">Por favor, ingrese un número de celular válido de 9 dígitos.</string>
+    <string name="invalid_dob_alert">Por favor, ingrese una fecha de nacimiento válida (YYYY-MM-DD).</string>
+    <string name="registration_success_alert">¡Registro exitoso! Todos los datos son correctos.</string>
+</resources>

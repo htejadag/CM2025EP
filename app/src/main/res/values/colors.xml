@@ -2,4 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="input_text_color">#FF000000</color> <!-- negro opaco -->
+    <color name="input_hint_color">#99000000</color> <!-- negro semitransparente para hint -->
+    <color name="input_background_color">#FFFFFFFF</color> <!-- fondo blanco -->
+
 </resources>

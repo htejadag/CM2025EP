@@ -1,3 +1,34 @@
 <resources>
-    <string name="app_name">ExamenParcial</string>
+    <string name="app_name">AppParcialCM</string>
+
+    <!-- Login -->
+    <string name="hint_usuario">Usuario</string>
+    <string name="hint_password">Contraseña</string>
+    <string name="btn_login">Iniciar sesión</string>
+    <string name="msg_campos_vacios">Por favor, complete todos los campos</string>
+    <string name="msg_credenciales_incorrectas">Credenciales incorrectas</string>
+
+    <!-- Registro -->
+    <string name="hint_nombre">Nombre</string>
+    <string name="hint_correo">Correo electrónico</string>
+    <string name="hint_celular">Celular</string>
+    <string name="hint_fecha_nacimiento">Fecha de nacimiento (dd/MM/yyyy)</string>
+
+    <string name="radio_masculino">Masculino</string>
+    <string name="radio_femenino">Femenino</string>
+    <string name="radio_otro">Otro</string>
+
+    <string name="checkbox_terminos">Acepto términos y condiciones</string>
+
+    <string name="btn_validar">Validar</string>
+    <string name="btn_regresar">Regresar</string>
+
+    <string name="msg_aceptar_terminos">Debe aceptar los términos y condiciones</string>
+    <string name="msg_complete_campos">Complete todos los campos</string>
+    <string name="msg_nombre_max">El nombre debe tener máximo 15 caracteres</string>
+    <string name="msg_correo_invalido">Correo electrónico inválido</string>
+    <string name="msg_celular_invalid">Número de celular debe tener 9 caracteres</string>
+    <string name="msg_fecha_invalida">Fecha de nacimiento inválida</string>
+
+    <string name="msg_registro_exitoso">Registro exitoso</string>
 </resources>

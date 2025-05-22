@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, Registro.class);
                 startActivity(intent);
             } else {
-                Toast.makeText(MainActivity.this, "Usuario y contraseña deben coincidir", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Credenciales incorrectos", Toast.LENGTH_SHORT).show();
             }
         });
     }

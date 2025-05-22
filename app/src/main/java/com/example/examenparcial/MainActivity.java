@@ -1,5 +1,6 @@
 package com.example.examenparcial;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -40,6 +41,9 @@ public class MainActivity extends AppCompatActivity {
 
             if (usuarioIngresado.equals(USUARIO_CORRECTO) && contrasenaIngresada.equals(CONTRASENA_CORRECTA)) {
                 Toast.makeText(this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this, DatosPersonales.class);
+                startActivity(intent);
+                finish();
             } else {
                 Toast.makeText(this, "Usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show();
             }

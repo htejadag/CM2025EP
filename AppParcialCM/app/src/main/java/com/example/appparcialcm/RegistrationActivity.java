@@ -82,6 +82,7 @@ public class RegistrationActivity extends AppCompatActivity {
                     String selectedDate = selectedYear + "-" + formattedMonth + "-" + formattedDay;
                     editTextDob.setText(selectedDate);
                 }, year, month, day);
+        datePickerDialog.getDatePicker().setMaxDate(System.currentTimeMillis());
         datePickerDialog.show();
     }
 

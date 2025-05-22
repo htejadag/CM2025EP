@@ -13,6 +13,12 @@
         android:theme="@style/Theme.ExamenParcial"
         tools:targetApi="31">
         <activity
+            android:name=".FormDatosP"
+            android:exported="false" />
+        <activity
+            android:name=".DatosPersonales"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

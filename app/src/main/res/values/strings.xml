@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">ExamenParcial</string>
+
+
+    <string name="login_user">Ingrese Usuario</string>
+    <string name="login_password">Ingrese Contraseña</string>
+    <string name="login_btn">Iniciar Sesion</string>
+
+
+    <string name="main_btn_register">Registrar Persona</string>
+
+
+    <string name="register_nombre">Ingrese nombre</string>
+    <string name="register_correo">Ingrese correo</string>
+    <string name="register_numero">Ingrese numero</string>
+    <string name="register_fecha">Ingrese fecha</string>
+    <string name="register_text">Selecione su genero</string>
+    <string name="register_check">Aceptar Terminos y condiciones</string>
+
+    <string name="register_btn">Registrar</string>
+    <string name="register_btn2">Volver</string>
 </resources>

@@ -60,4 +60,15 @@ public class Person implements Serializable {
     public void setGenero(String genero) {
         this.genero = genero;
     }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "nombre='" + nombre + '\'' +
+                ", correo='" + correo + '\'' +
+                ", numero='" + numero + '\'' +
+                ", fecha='" + fecha + '\'' +
+                ", genero='" + genero + '\'' +
+                '}';
+    }
 }

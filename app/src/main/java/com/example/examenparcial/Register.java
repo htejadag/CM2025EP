@@ -1,7 +1,10 @@
 package com.example.examenparcial;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -13,6 +16,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.examenparcial.Entities.Person;
+
 public class Register extends AppCompatActivity {
 
     String[] generos = {"Masculino", "Femenino", "Otro", "Prefiero no decir"};
@@ -20,6 +25,7 @@ public class Register extends AppCompatActivity {
     EditText etr1,etr2,etr3,etr4;
     Spinner spiner1;
     CheckBox checkBox1;
+    Button btnvalidar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,11 +45,14 @@ public class Register extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, generos);
         spiner1.setAdapter(adapter);
         checkBox1 = findViewById(R.id.checkBox1);
+        btnvalidar = findViewById(R.id.button3);
+        btnvalidar.setEnabled(false);
 
     }
 
 
     public boolean validar(String nom,String corr,String num,String fech){
+
         if(nom.isEmpty() && corr.isEmpty() && num.isEmpty() && fech.isEmpty()){
             return false;
         }else{
@@ -72,8 +81,41 @@ public class Register extends AppCompatActivity {
         }
     }
 
-    public void Registrar(){
+    public void volver(View view){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        clear();
+    }
 
+    public void Registrar(View view){
+        String nombre = etr1.getText().toString();
+        String correo = etr2.getText().toString();
+        String numero = etr3.getText().toString();
+        String fecha = etr4.getText().toString();
+        String genero = spiner1.getSelectedItem().toString();
+        if(validar(nombre,correo,numero,fecha)){
+            btnvalidar.setEnabled(true);
+            Person p = new Person(nombre,correo,numero,fecha,genero);
+            Intent intent = new Intent(this, MainActivity.class);
+            intent.putExtra("user2",p);
+            startActivity(intent);
+            clear();
+        }else{
+            Toast.makeText(this, "error en registro", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public void Validado(){
+        Toast.makeText(this, "Se ha validado todos los datos correctamente", Toast.LENGTH_SHORT).show();
+    }
+
+    public void clear(){
+        etr1.setText("");
+        etr2.setText("");
+        etr3.setText("");
+        etr4.setText("");
+        spiner1.setSelection(0);
+        checkBox1.setSelected(false);
     }
 
 }

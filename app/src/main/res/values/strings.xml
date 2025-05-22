@@ -17,6 +17,7 @@
     <string name="register_text">Selecione su genero</string>
     <string name="register_check">Aceptar Terminos y condiciones</string>
 
+    <string name="register_btn_validar">validar</string>
     <string name="register_btn">Registrar</string>
     <string name="register_btn2">Volver</string>
 </resources>

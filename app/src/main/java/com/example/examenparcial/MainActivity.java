@@ -11,6 +11,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.examenparcial.Entities.Person;
+
 public class MainActivity extends AppCompatActivity {
 
     TextView tvm1, tvm2;
@@ -25,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        mostrar();
     }
 
     public void registrar(View view){
@@ -38,6 +41,16 @@ public class MainActivity extends AppCompatActivity {
         tvm1.setText("BIENVENIDO USUARIO: "+user);
 
         tvm2 = findViewById(R.id.tvm2);
-        tvm2.setText("PERSONAS REGISTRADAS");
+        Person persona = (Person)  getIntent().getSerializableExtra("user2");
+        if(persona==null){
+            tvm2.setText("PERSONAS REGISTRADAS");
+        }else{
+            tvm2.setText("PERSONAS REGISTRADAS \n"+
+                    "------------------------------\n"+
+                    persona.toString());
+        }
+
+
+
     }
 }

@@ -64,8 +64,15 @@ public class DatosPersonales extends AppCompatActivity {
         int dia = calendario.get(Calendar.DAY_OF_MONTH);
 
         DatePickerDialog datePicker = new DatePickerDialog(this, (view, year, month, dayOfMonth) -> {
-            String fecha = dayOfMonth + "/" + (month + 1) + "/" + year;
-            etFechaNacimiento.setText(fecha);
+            Calendar fechaSeleccionada = Calendar.getInstance();
+            fechaSeleccionada.set(year, month, dayOfMonth);
+            Calendar fechaActual = Calendar.getInstance();
+            if (fechaSeleccionada.after(fechaActual)) {
+                Toast.makeText(DatosPersonales.this, "La fecha no puede ser mayor a la fecha actual.", Toast.LENGTH_SHORT).show();
+            } else {
+                String fecha = dayOfMonth + "/" + (month + 1) + "/" + year;
+                etFechaNacimiento.setText(fecha);
+            }
         }, anio, mes, dia);
 
         datePicker.show();

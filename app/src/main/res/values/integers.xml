@@ -1,0 +1,3 @@
+<resources>
+    <integer name="max_longitud_usuario">20</integer>
+</resources>

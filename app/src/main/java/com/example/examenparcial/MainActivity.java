@@ -2,6 +2,7 @@ package com.example.examenparcial;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputFilter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -26,6 +27,9 @@ public class MainActivity extends AppCompatActivity {
         etPassword = findViewById(R.id.etPassword);
         btnLogin = findViewById(R.id.btnLogin);
 
+        int maxUserLength = getResources().getInteger(R.integer.max_longitud_usuario);
+        etUser.setFilters(new InputFilter[] { new InputFilter.LengthFilter(maxUserLength) });
+
         btnLogin.setOnClickListener(v -> {
             String user = etUser.getText().toString();
             String password = etPassword.getText().toString();
@@ -34,7 +38,11 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, Registro.class);
                 startActivity(intent);
             } else {
-                Toast.makeText(MainActivity.this, "Credenciales incorrectos", Toast.LENGTH_SHORT).show();
+                Toast.makeText(
+                        MainActivity.this,
+                        getString(R.string.login_error_msg),
+                        Toast.LENGTH_SHORT
+                ).show();
             }
         });
     }

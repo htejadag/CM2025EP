@@ -7,13 +7,98 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <EditText
+        android:id="@+id/txtNombre"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="63dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/txt_nombre"
+        android:inputType="text"
+        android:textColorHint="#546E7A"
+        app:layout_constraintEnd_toEndOf="@+id/txtCorreo"
+        app:layout_constraintStart_toStartOf="@+id/txtFechNac"
+        app:layout_constraintTop_toTopOf="parent"
+        android:maxLength="15"/>
+
+    <EditText
+        android:id="@+id/txtCorreo"
+        android:layout_width="213dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginBottom="34dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/txt_correo"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/txtCelular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNombre" />
+
+    <EditText
+        android:id="@+id/txtCelular"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="41dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/txt_celular"
+        android:inputType="phone"
+        android:textColorHint="#546E7A"
+        app:layout_constraintBottom_toTopOf="@+id/txtFechNac"
+        app:layout_constraintEnd_toEndOf="@+id/checkTyC"
+        app:layout_constraintStart_toStartOf="@+id/txtCorreo"
+        android:maxLength="9"/>
+
+    <EditText
+        android:id="@+id/txtFechNac"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="4dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/txt_fecha_nac"
+        android:inputType="date"
+        android:textColorHint="#546E7A"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/txtCelular"
+        app:layout_constraintStart_toStartOf="@+id/txtCorreo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkTyC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_marginStart="57dp"
+        android:layout_marginBottom="48dp"
+        android:text="@string/txt_tyc"
+        app:layout_constraintBottom_toTopOf="@+id/btnRegresar"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnRegresar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="49dp"
+        android:text="@string/btn_regresar"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnValidar"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnValidar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="39dp"
+        android:layout_marginBottom="70dp"
+        android:enabled="false"
+        android:onClick="Validar"
+        android:text="@string/btn_validar"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/btnRegresar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

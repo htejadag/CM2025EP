@@ -1,3 +1,19 @@
 <resources>
-    <string name="app_name">ExamenParcial</string>
+    <string name="app_name">AppParcialCM</string>
+
+    <string name="btn_ingresar">INGRESAR</string>
+    <string name="btn_validar">VALIDAR</string>
+    <string name="btn_regresar">REGRESAR</string>
+
+    <string name="txt_user">usuario</string>
+    <string name="txt_passwd">contraseña</string>
+    <string name="txt_nombre">nombre</string>
+    <string name="txt_correo">correo</string>
+    <string name="txt_fecha_nac">fecha de nacimiento</string>
+    <string name="txt_celular">numero de celular</string>
+    <string name="txt_gm">Masculino</string>
+    <string name="txt_gf">Femenino</string>
+    <string name="txt_tyc">Aceptar Terminos y Condiciones</string>
+
+
 </resources>

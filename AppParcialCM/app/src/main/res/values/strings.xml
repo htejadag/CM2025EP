@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">AppParcialCM</string>
+    <!--Login-->
+    <string name="hint_usuario">Usuario</string>
+    <string name="hint_password">Password</string>
+    <string name="button_text">Inicio</string>
+    <string name="hint_nombre">Nombre</string>
+    <string name="hint_correo">Correo</string>
+    <string name="hint_celular">Celular</string>
+    <string name="hint_fechanac">Fecha Nacimiento</string>
+    <string name="hint_sexo">Sexo</string>
+    <string name="button_text2">Registrar</string>
+
+
+
+</resources>

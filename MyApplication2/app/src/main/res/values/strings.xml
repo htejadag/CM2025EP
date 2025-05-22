@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">My Application2</string>
+    <string name="hint_User">USER</string>
+    <string name="hint_txtPassword">PASSWORD</string>
+    <string name="hint_txt_btn">Ingresar</string>
+    <string name="hint_nombre">nombre</string>
+    <string name="hint_correo">correo</string>
+    <string name="hint_celular">celular</string>
+    <string name="hint_fn">nacimiento</string>
+    <string name="hint_sexo1">masculino</string>
+    <string name="hint_sexo2">femenino</string>
+    <string name="hint_condiciones">aceptar condiciones</string>
+    <string name="hint_regresar">Regresar</string>
+    <string name="hint_validar">validar</string>
+
+
+</resources>
